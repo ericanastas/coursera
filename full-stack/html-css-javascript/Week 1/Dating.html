@@ -31,36 +31,38 @@
 
         label.rangeMin {
             text-align: center;
-            width: 50px;
             background: #832F82;
+            width: auto;
             color: white;
+            padding: 3px;
         }
 
         label.rangeMax {
             text-align: center;
-            width: 50px;
             background: #A62A23;
+            width: auto;
             color: white;
+            padding: 3px;
         }
     </style>
 </head>
 <body>
     <h1>Please Enter Your Details For Our Dating Website!</h1>
-    <form action="http://ihome.ust.hk/~rossiter/cgi-bin/show_everything.php" enctype="multipart/form-data" method="post">
+    <form action="https://ihome.ust.hk/~rossiter/cgi-bin/show_everything.php" enctype="multipart/form-data" method="post">
         <fieldset>
             <legend>Your face</legend>
-            <label for="file">Your image:</label><input type="file" required /><br />
+            <label for="file">Your image:</label><input id="file" type="file" required /><br />
             <label for="preview">Image preview:</label><img id="preview" />
         </fieldset>
         <fieldset>
             <legend>Your general details</legend>
-            <label for="name">Name:</label><input type="text" placeholder="Your full name" required /><br />
-            <label for="gender">Gender:</label><input name="gender" type="radio" value="Male" required />Male<input name="gender" type="radio" value="Female" />Female<br />
-            <label for="age">Age:</label><input name="age" type="number" required /><br />
-            <label for="dob">Date of birth:</label><input name="dob" type="date" /><br />
-            <label for="favColor">Favorite Color:</label><input name="favColor" type="color" /><br />
+            <label for="name">Name:</label><input id="name" name="name" type="text" placeholder="Your full name" required /><br />
+            <label for="gender">Gender:</label><input id="gender" name="gender" type="radio" value="Male" required />Male<input name="gender" type="radio" value="Female" />Female<br />
+            <label for="age">Age:</label><input id="age" name="age" type="number" required /><br />
+            <label for="dob">Date of birth:</label><input id="dob" name="dob" type="date" /><br />
+            <label for="favColor">Favorite Color:</label><input id="favColor" name="favColor" type="color" /><br />
             <label for="country">Which country:</label>
-            <select name="country">
+            <select id="country" name="country">
                 <option value="NONE" selected>Unspecified</option>
                 <option value="US">United States</option>
                 <option value="GB">United Kingdom</option>
