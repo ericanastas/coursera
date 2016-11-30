@@ -1,55 +1,6 @@
 <!DOCTYPE HTML>
 <html>
-<head>
-    <style>
-        input {
-            margin-bottom: 5px;
-        }
-
-            label:hover, input:hover {
-                font-size: 20px;
-            }
-
-        fieldset {
-            background: lightyellow;
-            border: 10px solid yellow;
-            margin-bottom: 10px;
-            width: 720px;
-        }
-
-        label {
-            width: 180px;
-            display: inline-block;
-            text-align: right;
-            vertical-align: top;
-        }
-
-        .autowidth {
-            width: auto;
-        }
-
-        textarea {
-            width: 360px;
-            height: 50px;
-        }
-
-        label.rangeMin {
-            text-align: center;
-            background: #832F82;
-            width: auto;
-            color: white;
-            padding: 3px;
-        }
-
-        label.rangeMax {
-            text-align: center;
-            background: #A62A23;
-            width: auto;
-            color: white;
-            padding: 3px;
-        }
-    </style>
-</head>
+<head></head>
 <body>
     <h1>Please Enter Your Details For Our Dating Website!</h1>
     <form action="https://ihome.ust.hk/~rossiter/cgi-bin/show_everything.php" enctype="multipart/form-data" method="post">
@@ -78,8 +29,8 @@
         </fieldset>
         <fieldset>
             <legend>Your indicators</legend>
-            <label for="height">Height:</label><label for="height" class="rangeMin">Short</label><input id="height" name="height" type="range" min="0" max="100" value="50" /><label for="height" class="rangeMax">Tall</label><br />
-            <label for="salary">Salary:</label><label for="salary" class="rangeMin">Poor</label><input id="salary" name="salary" type="range" min="0" max="100" value="50" /><label for="salary" class="rangeMax">Rich</label>
+            <label for="height">Height:</label><label for="height" >Short</label><input id="height" name="height" type="range" min="0" max="100" value="50" /><label for="height">Tall</label><br />
+            <label for="salary">Salary:</label><label for="salary" >Poor</label><input id="salary" name="salary" type="range" min="0" max="100" value="50" /><label for="salary">Rich</label>
         </fieldset>
         <fieldset>
             <legend>Your Contact Information</legend>
@@ -87,13 +38,12 @@
             <label for="phone">Mobile:</label><input id="phone" name="phone" type="tel" /><br />
             <label for="address">Address:</label><textarea id="address" name="address"></textarea><br />
             <label for="contactPref">Method to contact you:</label>
-            <input name="contactPref" type="checkbox" value="email" /><label for="contactPref" class="autowidth">Email</label>
-            <input name="contactPref" type="checkbox" value="whatsapp" /><label for="contactPref" class="autowidth">Whatsapp</label>
-            <input name="contactPref" type="checkbox" value="chat" /><label for="contactPref" class="autowidth">In-App chat</label>
+            <input name="contactPref" type="checkbox" value="email" /><label for="contactPref">Email</label>
+            <input name="contactPref" type="checkbox" value="whatsapp" /><label for="contactPref">Whatsapp</label>
+            <input name="contactPref" type="checkbox" value="chat" /><label for="contactPref">In-App chat</label>
         </fieldset>
         <input type="submit" value="Submit" />
     </form>
-    <script src="https://www.cse.ust.hk/~rossiter/dating_web_site.js"></script>
 </body>
 
 </html>
