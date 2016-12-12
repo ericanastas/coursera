@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html>
+
+
+<script>
+    
+var colors = ["White","Silver","Gray","Black","Red","Maroon","Yellow","Olive","Lime","Green", "Aqua","Teal","Blue","Navy","Fuchsia","Purple"];
+var sortedColors = colors.sort();
+var finished = false;
+        
+function do_game(){
+
+    //Randomly Select the color
+    var answerIdx = Math.floor(Math.random()*colors.length);
+    console.log("answerIdx: "+answerIdx);
+    var answer = sortedColors[answerIdx];
+
+    //Display the correct color
+    alert("The correct answer is "+answer);
+    
+    while(!finished){
+        
+        //Prompt the user for a guess
+        var guess = prompt("I am thinking of one of these colors:\n\n"+
+                           sortedColors.join(", ")+"\n\nWhat color am I thinking of?");
+        
+        //Checks guess against answer
+        if(guess ==answer) finished = true;
+    }
+}
+
+</script>
+    
+
+
+<body onload="do_game()">
+    
+    
+</body>
+
+</html>
