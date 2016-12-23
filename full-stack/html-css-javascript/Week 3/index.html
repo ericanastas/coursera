@@ -36,6 +36,7 @@
         
         
         var theLeftSide = document.getElementById("leftSide");
+        var theRightSide = document.getElementById("rightSide");
 
         
         function generateFaces(){
@@ -45,12 +46,18 @@
                 
                 var newImage = document.createElement("img");
                 newImage.setAttribute("src","smile.png");
-                newImage.style.top = Math.random()*(divSize - imageSize);
-                newImage.style.left = Math.random()*(divSize - imageSize);
+                newImage.style.top = Math.random()*(divSize - imageSize)+"px";
+                newImage.style.left = Math.random()*(divSize - imageSize)+"px";
                 
                 theLeftSide.appendChild(newImage);
                 
             }
+            
+            
+            leftSideImages = theLeftSide.cloneNode(true);
+            leftSideImages.removeChild(leftSideImages.lastChild);
+            
+            theRightSide.appendChild(leftSideImages);
         
         }
 
