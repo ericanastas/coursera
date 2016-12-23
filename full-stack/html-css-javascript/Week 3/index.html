@@ -22,10 +22,39 @@
         
         </style>
     </head>
-    <body>
+    <body onload="generateFaces()">
         <h1>Matching Games</h1>
         <p>Click on the extra smiling face on the left.</p>
         <div id="leftSide"></div> 
         <div id="rightSide"></div> 
     </body>
+    
+    <script>
+        var numberOfFaces  = 5;
+        var divSize =500;
+        var imageSize = 100;
+        
+        
+        var theLeftSide = document.getElementById("leftSide");
+
+        
+        function generateFaces(){
+            
+            for(var i =0; i<numberOfFaces; i++){
+                
+                
+                var newImage = document.createElement("img");
+                newImage.setAttribute("src","smile.png");
+                newImage.style.top = Math.random()*(divSize - imageSize);
+                newImage.style.left = Math.random()*(divSize - imageSize);
+                
+                theLeftSide.appendChild(newImage);
+                
+            }
+        
+        }
+
+        
+    
+    </script>
 </html>
