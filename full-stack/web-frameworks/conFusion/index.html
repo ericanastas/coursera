@@ -13,6 +13,7 @@
     <link href="css/font-awesome.min.css" rel="stylesheet">
     <link href="css/bootstrap-social.css" rel="stylesheet">
     <link href="css/mystyles.css" rel="stylesheet">
+    <script src="js/bootstrap.min.js"></script>
     
     
 </head>
@@ -64,21 +65,57 @@
 
                 </ul>
                 
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a data-toggle="modal" data-target="#loginModal">
+                            <span class="glyphicon glyphicon-log-in"></span> Login
+                        </a>
+                    </li>
+                </ul>
                 
-                <form class="navbar-form navbar-right">
-                    <div class="form-group">
-                        <input class="form-control" type="text"  placeholder="Email">
-                        <input class="form-control" type="password"  placeholder="Password">
-                        <label class="form-check-label" style="color:#fff">
-                            <input class="form-check-input" type="checkbox">Remember Me    
-                         </label>
-                        <button class="btn btn-info" type="submit">Sign In</button>
-                    </div>
-                </form>
+                
+                
+                
+       
             </div>    
         </div>
     </nav>
 
+    <div id="loginModal" class="modal fade" role="dialog">
+        
+        <div class="modal-dialog">
+        
+            <div class="modal-content">
+            
+                <div class="modal-header">
+
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Login</h4>
+
+                </div>
+
+                <div class="modal-body">
+                    <form class="form-inline">
+                        <div class="form-group">
+                            <input class="form-control" type="text"  placeholder="Email">
+                            <input class="form-control" type="password"  placeholder="Password">
+                            <label class="form-check-label" style="color:#fff">
+                                <input class="form-check-input" type="checkbox">Remember Me    
+                             </label>
+                            <button class="btn btn-info btn-sm" type="submit">Sign In</button>
+                            <button class="btn btn-default btn-sm" type="button" data-dismiss="modal">Cancel</button>
+                        </div>
+                    </form>
+
+                </div>
+
+            </div>
+        
+        </div>
+    
+    
+    </div>
+    
     <header class="jumbotron">
 
         <!-- Main component for a primary marketing message or call to action -->
@@ -95,7 +132,7 @@
                 </div>
                 
                 <div class="col-xs-12 col-sm-2">
-                    <a href="#reserve_form" class="btn btn-warning btn-block">Reserve Table</a>
+                    <a type="button" data-toggle="tooltip" title="Or Call us at +852-123-4567" data-placement="bottom" href="#reserve_form" class="btn btn-warning btn-block">Reserve Table</a>
                 </div>
             </div>
         </div>
@@ -322,6 +359,14 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
+    
+    <script>
+        $(document).ready(function(){
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+        
+    
+    </script>
 
 </body>
 
