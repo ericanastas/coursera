@@ -67,9 +67,7 @@
                 
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a data-toggle="modal" data-target="#loginModal">
-                            <span class="glyphicon glyphicon-log-in"></span> Login
-                        </a>
+                        <a id="loginBtn"><span class="glyphicon glyphicon-log-in"></span>Login</a>
                     </li>
                 </ul>
                 
@@ -251,10 +249,8 @@
                 </div>
                 
                 <div class="col-xs-12 col-sm-2">                    
-                    <a type="button" 
-                       class="btn btn-warning btn-block" 
-                       data-toggle="modal" 
-                       data-target="#resTableModal">Reserve Table</a>
+                    <a type="button" id="reserverBtn"
+                       class="btn btn-warning btn-block" >Reserve Table</a>
                 </div>
             </div>
         </div>
@@ -486,6 +482,18 @@
         $(document).ready(function(){
             $('[data-toggle="tooltip"]').tooltip();
         });
+        
+        
+        $("#reserverBtn").click(function(){
+                                $("#resTableModal").modal("show");
+                                });
+        
+        
+        $("#loginBtn").click(function(){
+                                $("#loginModal").modal("show");
+                                });
+        
+        
         
     
     </script>
