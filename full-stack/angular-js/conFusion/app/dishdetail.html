@@ -48,19 +48,20 @@
                 </div>
             </div>
             <div class="col-xs-9 col-xs-offset-1">
-                <ul>
-                    <li>
-                        
-                        <blockquote ng-repeat="comment in dishCtrl.dish.comments">
-                            <h4>{{comment.rating}} Stars</h4>
-                            <p>{{comment.comment}}</p>
-                            <footer>{{comment.date|date}} <cite title="Author">{{comment.author}}</cite></footer>
-                        </blockquote>
-                    
-                    
-                    </li>
+          
                 
-                </ul>
+                <h4 class="col-xs-4">Customer Comments</h4>
+                
+                <div class="form-group" class="col-xs-5">
+                    <label>Sort by:</label>
+                    <input type="text" ng-model="dishCtrl.orderText"/>
+                </div>
+                <blockquote class="col-xs-9" ng-repeat="comment in dishCtrl.dish.comments | orderBy:dishCtrl.orderText">
+                    <h4>{{comment.rating}} Stars</h4>
+                    <p>{{comment.comment}}</p>
+                    <footer>{{comment.author}}, {{comment.date|date}}</footer>
+                </blockquote>
+                
             </div>
         </div>
 
@@ -72,6 +73,9 @@
         var app = angular.module('confusionApp',[]);
         
         app.controller('dishDetailController', function() {
+            
+            
+            this.orderText = '';
 
             var dish={
                           name:'Uthapizza',
@@ -116,6 +120,9 @@
                     };
             
             this.dish = dish;
+            
+            
+              
             
         });
 
